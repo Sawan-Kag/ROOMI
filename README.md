@@ -2,7 +2,8 @@ This Room Rental application provides the facility to select room at our ease. I
 ## GUI
 <center>##VIDEO</center>
 <h1 align="center">DEMO VIDEO</h1>
-[<h1 align="center"><img src="https://img.youtube.com/vi/kgrtsTxmQFQ/maxresdefault.jpg" width="50%"></h1>](https://youtu.be/kgrtsTxmQFQ)
+<h2 align="center">(https://youtu.be/kgrtsTxmQFQ)</h2>
+[<img src="https://img.youtube.com/vi/kgrtsTxmQFQ/maxresdefault.jpg" width="50%">](https://youtu.be/kgrtsTxmQFQ)
 
 <img alt="Image is not loaded" src="https://github.com/Sawan-Kag/Roomi/blob/Branch_21_Apr/ScreenShots/login.png?raw=true" width="283">
 <img alt="Image is not loaded" src="https://github.com/Sawan-Kag/Roomi/blob/Branch_21_Apr/ScreenShots/search.png?raw=true" width="283">
