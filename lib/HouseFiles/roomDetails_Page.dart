@@ -9,6 +9,7 @@ import 'package:full_screen_image/full_screen_image.dart';
 import 'package:intl/intl.dart';
 import 'package:responsive_container/responsive_container.dart';
 import 'package:roomi/user_data/user_profile_data.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HouseDetail extends StatefulWidget {
   int index;
@@ -1402,8 +1403,8 @@ class _HouseDetailState extends State<HouseDetail> {
                 width: size.wp(84) - size.hp(16),
                 child: Padding(
                   padding: EdgeInsets.symmetric(
-                      vertical: size.getWidthPx(12),
-                      horizontal: size.getWidthPx(16)),
+                      vertical: size.getWidthPx(0),
+                      horizontal: size.getWidthPx(10)),
                   child: Column(
                     children: <Widget>[
                       Align(
@@ -1430,16 +1431,29 @@ class _HouseDetailState extends State<HouseDetail> {
                                   fontSize: size.getWidthPx(16))),
                         ],
                       ),
-                      SizedBox(
-                        height: size.getWidthPx(10),
-                      ),
                       Align(
                         alignment: Alignment.topLeft,
-                        child: Text("${documentSnapshot.data["OwnerPhone"]}",
-                            textAlign: TextAlign.left,
-                            style: TextStyle(
-                                color: Colors.grey,
-                                fontSize: size.getWidthPx(15))),
+                        child: TextButton(
+                          onPressed: () => launch(
+                              "tel://${documentSnapshot.data["OwnerPhone"]}"),
+                          child: Row(
+                            children: [
+                              Icon(
+                                Icons.phone_forwarded_rounded,
+                                color: Colors.black,
+                              ),
+                              SizedBox(
+                                width: 5,
+                              ),
+                              Text("${documentSnapshot.data["OwnerPhone"]}",
+                                  textAlign: TextAlign.left,
+                                  style: TextStyle(
+                                      decoration: TextDecoration.underline,
+                                      color: Colors.blue,
+                                      fontSize: size.getWidthPx(20))),
+                            ],
+                          ),
+                        ),
                       )
                     ],
                   ),
